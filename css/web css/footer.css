@@ -84,6 +84,10 @@
   color: #fff;
 }
 
+.logo{
+  margin-bottom: 10px;
+}
+
 /* Newsletter */
 .newsletter h4 {
   font-size: 1.1rem;
