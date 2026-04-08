@@ -6,8 +6,23 @@
 /* GRID */
 .workspace-gallery {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px; /* slightly tighter = better look */
+  margin: 20px 60px;
+}
+
+.mentor-top-title{
+  font-size: 3.5rem;;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.courses-subtitle{
+  margin-bottom: 3.5rem;
 }
 
 /* IMAGES */
