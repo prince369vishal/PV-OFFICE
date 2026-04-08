@@ -178,7 +178,6 @@
   z-index: 1000;
 }
 
-//TABLET CSS
 
 /* Tablet Navbar Overrides */
 @media (min-width: 600px) and (max-width: 1024px) {
