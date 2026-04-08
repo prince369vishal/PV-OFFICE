@@ -42,7 +42,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 34px;
+  gap: 54px;
   align-items: start;
 }
 
