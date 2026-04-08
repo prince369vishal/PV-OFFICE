@@ -1,0 +1,44 @@
+/* Mobile Navbar Overrides */
+@media (max-width: 599px) {
+  .nav-content {
+    padding: 0 16px;
+    position: relative;
+  }
+
+  .nav-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .menu-button {
+    display: inline-flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* Show dropdown when active */
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 16px;
+    left: 16px;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(20, 22, 28, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    z-index: 1100;
+  }
+
+  .nav-links.active a {
+    width: 100%;
+    display: block;
+    padding: 12px;
+    border-radius: 10px;
+  }
+}

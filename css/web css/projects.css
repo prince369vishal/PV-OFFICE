@@ -1,0 +1,223 @@
+/* Live Projects Section Styles */
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  background-color: #1a1a1a;
+  color: white;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* Project Card */
+.project-card {
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px 0 rgba(127, 2, 2, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.project-image-card{
+  border-radius: 10px;
+}
+
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+/* Project Title */
+.project-card h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin: 0 0 16px;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.project-card:hover h3 {
+  color: #4f7eff;
+  transform: translateX(5px);
+  text-shadow: 0 0 20px rgba(79, 126, 255, 0.3);
+}
+/* Tech Pills */
+.tech-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.875rem;
+  color: #888;
+  transition: all 0.4s ease;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Project Description */
+.project-description {
+  color: #888;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 20px 0;
+  transition: all 0.4s ease;
+}
+
+.project-card:hover .project-description {
+  color: #aaa;
+}
+
+/* Project Footer */
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.level {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  background: rgba(255, 215, 0, 0.05);
+  border-radius: 100px;
+  font-size: 0.9rem;
+  color: #ffd700;
+  transition: all 0.4s ease;
+}
+
+.project-card:hover .level {
+  background: rgba(255, 215, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.star-icon {
+  color: #ffd700;
+  transition: all 0.4s ease;
+}
+
+/* View Details */
+.view-details {
+  position: relative;
+  color: #4f7eff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.4s ease;
+}
+
+.view-details::after {
+  content: "→";
+  transition: transform 0.4s ease;
+}
+
+.view-details::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #4f7eff, #6b8fff);
+  transition: width 0.4s ease;
+}
+
+/* Tech badges */
+.tech-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+
+.tech-badge.mern {
+  background-color: #2962ff;
+}
+.tech-badge.react-native {
+  background-color: #c80000;
+}
+.tech-badge.java {
+  background-color: #aa00ff;
+}
+.platform-icon {
+  font-size: 1.5rem;
+}
+
+/* Top & Bottom Border Animations */
+.project-card::before,
+.project-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(79, 126, 255, 0.8),
+    transparent
+  );
+  transition: 0.5s ease;
+  z-index: 1;
+}
+.project-card::before {
+  top: 0;
+  left: -100%;
+}
+.project-card::after {
+  bottom: 0;
+  right: -100%;
+}
+
+.project-card:hover::before {
+  left: 100%;
+  transition-delay: 0s;
+}
+.project-card:hover::after {
+  right: 100%;
+  transition-delay: 0.25s;
+}
+
+
+//TABLET CSS
+
+/* Tablet Projects Overrides */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .projects-container {
+    padding: 80px 24px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+}

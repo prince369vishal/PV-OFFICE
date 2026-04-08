@@ -1,0 +1,19 @@
+/* Mobile FAQ Overrides */
+@media (max-width: 599px) {
+  .faq-container {
+    padding: 60px 16px;
+  }
+
+  .faq-header {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .faq-question h3 {
+    font-size: 1.05rem;
+  }
+
+  .faq-content {
+    padding: 0 16px 16px 56px;
+  }
+}

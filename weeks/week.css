@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #fff;
+}
+
+/* CONTAINER */
+.week-container {
+  padding: 60px 20px;
+  text-align: center;
+  height:100vh;
+}
+
+.week-container h1 {
+  font-size: 38px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00ffae, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+/* GRID */
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* CARD */
+.day-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 22px;
+  text-align: left;
+  transition: all 0.35s ease;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* GRADIENT BORDER EFFECT */
+.day-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 1px;
+  background: linear-gradient(120deg, transparent, #00ffae, transparent);
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.day-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 255, 174, 0.15);
+}
+
+.day-card:hover::before {
+  opacity: 1;
+}
+
+/* TITLE */
+.day-card h3 {
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* TAG */
+.day-tag {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(0, 255, 174, 0.1);
+  color: #00ffae;
+  display: inline-block;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* LIST */
+.day-card ul {
+  padding-left: 18px;
+}
+
+.day-card li {
+  margin-bottom: 8px;
+  color: #cbd5f5;
+  font-size: 14px;
+}
+
+/* OFF DAY */
+.off-day {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+.day-tag.off {
+  background: rgba(255, 107, 107, 0.1);
+  color: #ff6b6b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .week-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .week-grid {
+    grid-template-columns: 1fr;
+  }
+}

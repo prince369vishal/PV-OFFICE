@@ -1,0 +1,40 @@
+/* Mobile Batches Overrides */
+@media (max-width: 599px) {
+  .batches-container {
+    padding: 60px 16px;
+  }
+
+  .batches-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .batches-grid {
+    gap: 16px;
+  }
+
+  .batch-content {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .batch-image {
+    flex: none;
+  }
+
+  .batch-info .batch-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .batch-description {
+    font-size: 0.95rem;
+  }
+
+  .batch-price-group {
+    gap: 8px;
+  }
+
+  .batch-count {
+    display: none;
+  }
+}

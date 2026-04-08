@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Job Simulation | Week 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0e12;
+      --card: #15171e;
+      --accent: #fb7185; /* Rose/Red accent for debugging */
+      --text: #e2e8f0;
+      --dim: #64748b;
+      --border: rgba(251, 113, 133, 0.1);
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 50px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      margin-bottom: 70px;
+    }
+
+    .phase-indicator {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--accent);
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin: 0;
+      background: linear-gradient(to bottom right, #fff 50%, #64748b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      color: var(--dim);
+      font-size: 1.25rem;
+      margin-top: 15px;
+      max-width: 600px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 35px;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card:hover {
+      background: #1a1d26;
+      border-color: var(--accent);
+      box-shadow: 0 10px 30px -10px rgba(251, 113, 133, 0.2);
+    }
+
+    .day-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--dim);
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .category {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: block;
+      color: #fff;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 30px 0;
+    }
+
+    li {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      padding: 10px 0;
+      display: flex;
+      gap: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    li::before {
+      content: "◈";
+      color: var(--accent);
+    }
+
+    .metric-box {
+      background: rgba(251, 113, 133, 0.05);
+      border-radius: 12px;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .metric-label {
+      font-size: 0.75rem;
+      color: var(--dim);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .metric-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--accent);
+    }
+
+    /* Weekend Spotlight */
+    .special-card {
+      background: linear-gradient(135deg, #15171e 0%, #2d161b 100%);
+      border: 1px solid rgba(251, 113, 133, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="hero">
+      <span class="phase-indicator">PHASE 03 // QUALITY ASSURANCE</span>
+      <h1>Stability & Refactoring</h1>
+      <p class="subtitle">Systematic identification of regressions, root-cause analysis, and enterprise-grade code hardening.</p>
+    </header>
+
+    <div class="grid">
+      <article class="card">
+        <div class="day-label">Monday <span>09:00 - 18:00</span></div>
+        <span class="category">Incident Triage</span>
+        <ul>
+          <li>Priority bug ticket ingestion</li>
+          <li>User report deconstruction</li>
+          <li>Systematic bug reproduction</li>
+          <li>Log stream & stack trace analysis</li>
+        </ul>
+        <div class="metric-box">
+          <span class="metric-label">Focus Metric</span>
+          <span class="metric-value">MTTA (Mean Time to Ack)</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="day-label">Tuesday <span>Deep Work</span></div>
+        <span class="category">Root Cause Analysis</span>
+        <ul>
+          <li>Deep-stack application debugging</li>
+          <li>Logic flaw isolation</li>
+          <li>Hotfix development & patching</li>
+          <li>Local regression verification</li>
+        </ul>
+        <div class="metric-box">
+          <span class="metric-label">Focus Metric</span>
+          <span class="metric-value">Root Cause Accuracy</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="day-label">Wednesday <span>Audit</span></div>
+        <span class="category">Architectural Integrity</span>
+        <ul>
+          <li>Peer code review cycles</li>
+          <li>Cognitive load reduction (Refactoring)</li>
+          <li>Readability & maintainability audit</li>
+          <li>Design pattern alignment</li>
+        </ul>
+        <div class="metric-box">
+          <span class="metric-label">Focus Metric</span>
+          <span class="metric-value">Cyclomatic Complexity</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="day-label">Thursday <span>Validation</span></div>
+        <span class="category">QA Synchronization</span>
+        <ul>
+          <li>End-to-end testing simulation</li>
+          <li>Build failure & rejection handling</li>
+          <li>Edge-case boundary testing</li>
+          <li>Cross-departmental feedback sync</li>
+        </ul>
+        <div class="metric-box">
+          <span class="metric-label">Focus Metric</span>
+          <span class="metric-value">Test Coverage %</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="day-label">Friday <span>Growth</span></div>
+        <span class="category">Performance Audit</span>
+        <ul>
+          <li>Management feedback alignment</li>
+          <li>Technical blind-spot identification</li>
+          <li>L&D Improvement planning</li>
+          <li>Weekly output evaluation</li>
+        </ul>
+        <div class="metric-box">
+          <span class="metric-label">Focus Metric</span>
+          <span class="metric-value">Velocity Delta</span>
+        </div>
+      </article>
+
+      <article class="card special-card">
+        <div class="day-label" style="color: var(--accent);">Saturday <span>Summit</span></div>
+        <span class="category">Career Stress-Test</span>
+        <ul style="color: #fda4af;">
+          <li>Executive-level Mock Interview</li>
+          <li>High-pressure Q&A session</li>
+          <li>Strategic professional roadmap</li>
+        </ul>
+        <div class="metric-box" style="background: rgba(255,255,255,0.05);">
+          <span class="metric-label" style="color: #fff;">Status</span>
+          <span class="metric-value" style="color: #fff;">Interview Ready</span>
+        </div>
+      </article>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Job Simulation | Week 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0a0c;
+      --card-bg: #16161a;
+      --accent: #6366f1;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --glass: rgba(255, 255, 255, 0.03);
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .badge {
+      background: rgba(99, 102, 241, 0.1);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 20px 0 10px;
+      background: linear-gradient(to right, #fff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* The Timeline Grid */
+    .simulation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    .day-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 30px;
+      position: relative;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .day-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .day-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 4px;
+      background: var(--accent);
+      opacity: 0.3;
+    }
+
+    .day-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .day-name {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .focus-tag {
+      font-size: 1.2rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 25px 0;
+    }
+
+    li {
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+    }
+
+    li::before {
+      content: "→";
+      color: var(--accent);
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .card-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-item b {
+      color: var(--text-main);
+    }
+
+    /* Special Highlight for Weekend/Mock Interview */
+    .special-card {
+      background: linear-gradient(145deg, #16161a 0%, #1e1b4b 100%);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <span class="badge">Phase 01: Integration</span>
+      <h1>Onboarding + Team Workflow</h1>
+      <p class="subtitle">A high-fidelity simulation of your first 40 hours in a world-class engineering team.</p>
+    </header>
+
+    <div class="simulation-grid">
+      
+      <article class="day-card">
+        <div class="day-header">
+          <span class="day-name">MONDAY</span>
+          <span class="badge" style="font-size: 0.6rem;">Day 01</span>
+        </div>
+        <span class="focus-tag">Cultural Immersion</span>
+        <ul>
+          <li>Company architecture deep-dive</li>
+          <li>Global team allocation</li>
+          <li>Toolstack provisioning (Git/Jira)</li>
+          <li>Product roadmap sync</li>
+        </ul>
+        <div class="card-footer">
+          <span class="footer-item">Effort: <b>6h</b></span>
+          <span class="footer-item">Outcome: <b>Access</b></span>
+        </div>
+      </article>
+
+      <article class="day-card">
+        <div class="day-header">
+          <span class="day-name">TUESDAY</span>
+        </div>
+        <span class="focus-tag">Agile Governance</span>
+        <ul>
+          <li>Sprint cycle fundamentals</li>
+          <li>Live standup simulation</li>
+          <li>Ticket taxonomy & lifecycle</li>
+          <li>Complexity (Story Point) estimation</li>
+        </ul>
+        <div class="card-footer">
+          <span class="footer-item">Effort: <b>8h</b></span>
+          <span class="footer-item">Outcome: <b>Context</b></span>
+        </div>
+      </article>
+
+      <article class="day-card">
+        <div class="day-header">
+          <span class="day-name">WEDNESDAY</span>
+        </div>
+        <span class="focus-tag">Technical Initiation</span>
+        <ul>
+          <li>High-priority ticket selection</li>
+          <li>Local environment parity</li>
+          <li>Modular breakdown of tasks</li>
+          <li>Initial branch architecture</li>
+        </ul>
+        <div class="card-footer">
+          <span class="footer-item">Effort: <b>8h</b></span>
+          <span class="footer-item">Outcome: <b>Action</b></span>
+        </div>
+      </article>
+
+      <article class="day-card">
+        <div class="day-header">
+          <span class="day-name">THURSDAY</span>
+        </div>
+        <span class="focus-tag">Deep Development</span>
+        <ul>
+          <li>Core feature implementation</li>
+          <li>Professional blocker escalation</li>
+          <li>Collaborative debugging sessions</li>
+          <li>Git staging & commit standards</li>
+        </ul>
+        <div class="card-footer">
+          <span class="footer-item">Effort: <b>8h</b></span>
+          <span class="footer-item">Outcome: <b>Progress</b></span>
+        </div>
+      </article>
+
+      <article class="day-card">
+        <div class="day-header">
+          <span class="day-name">FRIDAY</span>
+        </div>
+        <span class="focus-tag">Quality Assurance</span>
+        <ul>
+          <li>Pull Request (PR) orchestration</li>
+          <li>Senior-level code review sync</li>
+          <li>Iterative refactoring</li>
+          <li>Weekly performance metrics</li>
+        </ul>
+        <div class="card-footer">
+          <span class="footer-item">Effort: <b>7h</b></span>
+          <span class="footer-item">Outcome: <b>Delivery</b></span>
+        </div>
+      </article>
+
+      <article class="day-card special-card">
+        <div class="day-header">
+          <span class="day-name" style="color: #a5b4fc;">SATURDAY</span>
+          <span class="badge" style="background: #6366f1; color: white;">Executive Review</span>
+        </div>
+        <span class="focus-tag">Career Acceleration</span>
+        <ul>
+          <li>L5/L6 Technical Mock Interview</li>
+          <li>Intensive Q&A stress-test</li>
+          <li>Personalized Growth Roadmap</li>
+        </ul>
+        <div class="card-footer">
+          <span class="footer-item">Effort: <b>3h</b></span>
+          <span class="footer-item" style="color: #a5b4fc;">Outcome: <b>Mastery</b></span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+</body>
+</html>

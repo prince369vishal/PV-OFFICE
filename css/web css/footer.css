@@ -1,0 +1,154 @@
+/* Footer Base */
+.footer {
+  position: relative;
+  background: linear-gradient(
+    165deg,
+    #000000 0%,
+    #0a0a0a 40%,
+    rgba(13, 13, 13, 0.9) 100%
+  );
+  color: #fff;
+  padding: 80px 20px 30px;
+  overflow: hidden;
+}
+
+/* Footer Content */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Company Info */
+.footer-company {
+  max-width: 300px;
+}
+
+.footer-company h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.footer-company p {
+  color: #888;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-links a {
+  color: #888;
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* Footer Columns */
+.footer-column h4 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Newsletter */
+.newsletter h4 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.newsletter p {
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-size: 0.95rem;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: #4f7eff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #888;
+  font-size: 1.9rem;
+  opacity: 0.3;
+  position: relative;
+  z-index: 1;
+  border-bottom: 0.1px solid white;
+
+}
+
+
+
+//TABLET CSS
+
+/* Tablet Footer Overrides */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .footer .footer-content {
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .newsletter-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+  }
+}

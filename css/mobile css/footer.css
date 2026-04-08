@@ -1,0 +1,22 @@
+/* Mobile Footer Overrides */
+@media (max-width: 599px) {
+  .footer {
+    
+    padding: 50px 16px;
+  }
+
+  .footer-content {
+    grid-template-columns: 2fr;
+    gap: 2px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .subscribe-button {
+    width: 100%;
+  }
+
+
+}

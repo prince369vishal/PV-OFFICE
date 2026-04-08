@@ -1,0 +1,541 @@
+/* Contact Form Styles */
+.contact-form {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 32px;
+  border-radius: 12px;
+}
+
+.form-row {
+  display: grid;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 24px;
+  margin-right: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(13, 13, 13, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2962ff;
+}
+
+/* Error State */
+.form-group.error input,
+.form-group.error textarea {
+  border-color: #ff3b30;
+  background: rgba(255, 59, 48, 0.05);
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.form-group.required label::after {
+  content: "*";
+  color: #ff3b30;
+  margin-left: 4px;
+}
+
+.error-message {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: #ff3b30;
+  font-size: 0.8rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: showError 0.3s forwards;
+}
+
+.form-group.error .error-message {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact Section Styles */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  color: white;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+.contact-container h1 {
+  font-size: 55px;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Contact Info Styles */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: #2a2a2a;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-icon.blue {
+  background-color: #2962ff;
+}
+
+.info-icon svg {
+  color: white;
+}
+
+.info-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.info-content p {
+  margin: 0;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+/* WhatsApp Info Item */
+.info-item.whatsapp {
+  background: rgba(37, 211, 102, 0.1);
+  border: 1px solid rgba(37, 211, 102, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.info-icon.green {
+  background: rgba(37, 211, 102, 0.15);
+  color: #25d366;
+  transition: all 0.3s ease;
+}
+
+.info-icon.green svg {
+  width: 24px;
+  height: 24px;
+  color: #25d366;
+}
+
+/* WhatsApp Link */
+.whatsapp-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  text-decoration: none;
+  border-radius: 14px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.2),
+    0 2px 4px rgba(37, 211, 102, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.whatsapp-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.whatsapp-link:hover::before {
+  transform: translateX(100%);
+}
+
+.whatsapp-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.25),
+    0 4px 8px rgba(37, 211, 102, 0.15),
+    inset 0 2px 4px rgba(255, 255, 255, 0.15);
+}
+
+.whatsapp-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  padding: 6px;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-link:hover .whatsapp-icon {
+  transform: scale(1.1) rotate(8deg);
+}
+
+.whatsapp-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.whatsapp-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.whatsapp-label {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.whatsapp-number {
+  font-weight: 600;
+}
+
+.whatsapp-arrow {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-link:hover .whatsapp-arrow {
+  transform: translateX(4px);
+}
+
+/* Submit Button */
+.submit-button {
+  position: relative;
+  width: 100%;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #4f7eff, #6b8fff);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 126, 255, 0.3);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* Loading State */
+.submit-button.loading {
+  pointer-events: none;
+  color: transparent;
+}
+
+.submit-button.loading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+.submit-button.loading::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Success State */
+.submit-button.success {
+  background: linear-gradient(135deg, #34c759, #32d74b);
+  pointer-events: none;
+}
+
+.submit-button.success::before {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Success Modal */
+.success-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  padding: 40px;
+  background: rgba(23, 25, 35, 0.95);
+  border-radius: 24px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4), 0 12px 24px rgba(0, 0, 0, 0.2);
+  min-width: 320px;
+}
+
+.success-modal.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.success-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  z-index: 999;
+}
+
+.success-modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  background: rgba(52, 199, 89, 0.1);
+  border-radius: 50%;
+  padding: 16px;
+  color: #34c759;
+  transform: scale(0.8);
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.success-modal.show .success-icon {
+  transform: scale(1);
+}
+
+.success-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.success-modal h3 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.success-modal p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.checkmark-path {
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+.success-modal.show .checkmark-path {
+  stroke-dashoffset: 0;
+}
+
+/* Notifications */
+.notification {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-weight: 500;
+  color: #fff;
+  transform: translateX(120%);
+  animation: slideIn 0.5s forwards;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.notification.success {
+  background: linear-gradient(
+    135deg,
+    rgba(52, 199, 89, 0.9),
+    rgba(48, 209, 88, 0.9)
+  );
+  border: 1px solid rgba(52, 199, 89, 0.2);
+}
+
+.notification.error {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 59, 48, 0.9),
+    rgba(255, 69, 58, 0.9)
+  );
+  border: 1px solid rgba(255, 59, 48, 0.2);
+}
+
+.notification::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.notification.success::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z'/%3E%3C/svg%3E");
+}
+
+.notification.error::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.5 5h3v10h-3v-10zm1.5 15.25c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2z'/%3E%3C/svg%3E");
+}
+
+/* Animations */
+@keyframes showError {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translateX(-2px);
+  }
+  20%,
+  80% {
+    transform: translateX(4px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-8px);
+  }
+  40%,
+  60% {
+    transform: translateX(8px);
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+//TABLET CSS
+
+/* Tablet Contact Overrides */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .contact-container {
+    padding: 80px 24px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .contact-form .form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}

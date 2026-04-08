@@ -1,0 +1,31 @@
+/* Mobile Projects Overrides */
+@media (max-width: 599px) {
+  .projects-container {
+    padding: 60px 16px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .project-card {
+    padding: 16px;
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .project-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+  }
+
+  .project-footer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}

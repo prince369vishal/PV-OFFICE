@@ -1,0 +1,40 @@
+.workspace-section {
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+/* GRID */
+.workspace-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px; /* slightly tighter = better look */
+}
+
+/* IMAGES */
+.workspace-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* 🔥 makes it perfectly square */
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* HOVER EFFECT */
+.workspace-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 255, 174, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .workspace-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .workspace-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

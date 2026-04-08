@@ -1,0 +1,253 @@
+/* ================= Batches Section ================= */
+.batches-container {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.batches-container h1 {
+  font-size: 55px;
+}
+.batch-count {
+  font-size: 55px;
+  background: rgba(79, 126, 255, 0.1);
+  color:rgb(216, 29, 29);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.batches-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ================= Batch Card ================= */
+.batch-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Overlay gradient */
+.batch-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg,rgb(71, 161, 38), rgba(0, 139, 16, 0.1));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Closed Badge */
+.batch-card::before {
+  content: "BATCH CLOSED";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: linear-gradient(135deg, #ff3b30 0%, #ff9500 100%);
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  z-index: 10;
+  opacity: 0;
+  box-shadow: 0 10px 30px rgba(255, 59, 48, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Batch Closed State */
+.batch-card.closed {
+  transform: scale(0.98);
+  filter: grayscale(0.3) brightness(0.9);
+  box-shadow: 0 0 50px rgba(139, 0, 0, 0.2);
+}
+
+.batch-card.closed::after {
+  opacity: 1;
+}
+
+.batch-card.closed::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  animation: darkRedGlow 2s infinite;
+}
+
+/* ================= Batch Content ================= */
+.batch-content {
+  display: flex;
+  gap: 32px;
+  padding: 24px;
+}
+
+.batch-image {
+  flex: 0 0 320px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.batch-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.batch-card:hover .batch-image img {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.batch-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.batch-card:hover .batch-overlay {
+  opacity: 1;
+}
+
+/* Batch Stats (bottom overlay info) */
+.batch-stats {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* ================= Batch Status ================= */
+.batch-status {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+}
+
+.batch-card:hover .status-badge {
+  background: rgba(65, 226, 7, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(107, 255, 48, 0.2);
+}
+
+/* ================= Batch Info ================= */
+.batch-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.batch-header {
+  margin-bottom: 16px;
+}
+
+.batch-header h3 {
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.course-count {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.batch-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #888;
+  margin: 0 0 24px 0;
+}
+
+/* ================= Batch Footer ================= */
+.batch-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.batch-price-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.original-price {
+  color: #666;
+  text-decoration: line-through;
+  font-size: 1rem;
+}
+
+.discounted-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4f7eff;
+}
+
+.discount-badge {
+  background: rgba(79, 126, 255, 0.1);
+  color: #4f7eff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* ================= Extras ================= */
+.lock-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.stat-value,
+.stat-icon {
+  font-size: 1.5rem;
+}
+
+
+//TABLET CSS
+
+/* Tablet Batches Overrides */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .batches-container {
+    padding: 80px 24px;
+  }
+
+  .batches-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .batch-content {
+    gap: 20px;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,132 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+.modal-box {
+  background: linear-gradient(180deg, #071a2f, #051426);
+  border-radius: 22px;
+  max-width: 420px;
+  width: 100%;
+  padding: 36px 30px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.7);
+  position: relative;
+  color: #e5e7eb;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.modal-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: -14px;
+}
+
+.modal-sub {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.modal-seat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 26px 0;
+}
+
+.modal-seat {
+  background: rgba(255,255,255,0.03);
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.modal-seat span {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.modal-seat strong {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.modal-price-box {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.modal-price-box span {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.modal-price-box strong {
+  display: block;
+  font-size: 2.2rem;
+  margin-top: 6px;
+}
+
+#modal-price{
+  font-size: 4rem;
+  margin-left: 5px;
+}
+
+.modal-features {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+
+.modal-features li {
+  margin-bottom: 10px;
+  color: #cbd5f5;
+  padding-left: 18px;
+  position: relative;
+}
+
+.modal-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #10b981;
+}
+
+.modal-trust {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+.buy-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border: none;
+  color: white;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(239,68,68,0.4);
+}
+
+.hidden{
+  display: none;
+}
