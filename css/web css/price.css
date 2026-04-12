@@ -88,9 +88,9 @@
   margin-bottom: 10px;
 }
 .pricing-mode-badge--online {
-  background: rgba(94, 162, 255, 0.12);
+  background: rgba(129, 255, 94, 0.12);
   border: 1px solid rgba(94, 162, 255, 0.2);
-  color: #5ea2ff;
+  color:rgb(108, 255, 94);
 }
 .pricing-mode-badge--offline {
   background: rgba(99, 153, 34, 0.12);
