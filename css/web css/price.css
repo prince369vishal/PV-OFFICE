@@ -225,6 +225,6 @@
   .pricing-wrapper { grid-template-columns: 1fr; }
   .pricing-body,
   .pricing-top     { padding: 16px 20px; }
-  .pricing-title { font-size: large;}
-  .pricing-subtitle { font-size: medium;}
+  .pricing-title { font-size: 2rem;}
+  .pricing-subtitle { font-size: 1.2rem;}
 }
