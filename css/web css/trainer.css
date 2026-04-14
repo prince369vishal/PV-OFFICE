@@ -331,11 +331,14 @@
   @media (max-width: 768px) {
     .trainers-header,
     .trainers-nav   { padding: 0 20px; }
-    .trainers-track { padding: 8px 20px 20px; }
-    .trainer-card   { width: 260px; }
+    .trainers-track { padding: 8px; }
+    .trainer-card   { width: 360px; }
   }
  
   @media (max-width: 480px) {
+
+    .trainers-track { padding: 8px; }
+    .trainer-card   { width: 360px; }
 
 .trainers-section {
   padding: 32px 12px;
@@ -347,11 +350,11 @@ text-align: center;
 }
 
 .trainers-title {
-  font-size: 1.6rem;
+  font-size: 2.2rem;
 }
 
 .trainers-subtitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .trainers-eyebrow span {
