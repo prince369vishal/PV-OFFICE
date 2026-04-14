@@ -1,69 +1,74 @@
-  /* ── Animations ──────────────────────────────────────────── */
-  @keyframes ts-fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
+/* ── Animations ──────────────────────────────────────────── */
+@keyframes ts-fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
   }
- 
-  /* ── Section ─────────────────────────────────────────────── */
-
-
-  .trainers-section {
-    padding: 40px 20px;
-    margin: 60px ;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* ── Header ──────────────────────────────────────────────── */
-  .trainers-header {
-    display:flex;
+}
+
+/* ── Section ─────────────────────────────────────────────── */
+
+.trainers-section {
+  padding: 40px 20px;
+  margin: 60px;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.trainers-header {
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-    padding: 0 48px;
-    margin-bottom: 48px;
-    animation: ts-fadeUp 0.5s ease-out both;
-  }
- 
-  .trainers-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 12px;
-    border-radius: 100px;
-    background: rgba(94, 162, 255, 0.1);
-    border: 1px solid rgba(94, 162, 255, 0.2);
-    margin-bottom: 14px;
-  }
- 
-  .trainers-eyebrow span {
-    font-size: 11px;
-    font-weight: 600;
-    color: #5ea2ff;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
- 
-  .trainers-title {
-    font-size: clamp(3.6rem, 4vw, 2.4rem);
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: -0.02em;
-    line-height: 1.15;
-    margin: 0 0 8px;
-  }
- 
-  .trainers-subtitle {
-    font-size: 1.4rem;
-    color: rgba(255, 255, 255, 0.45);
-    margin: 0;
-  }
- 
-  /* ── Scroll outer wrapper ────────────────────────────────── */
-  .trainers-scroll-outer {
-    position: relative;
-  }
- 
-  /* Edge fade masks */
-  /* .trainers-scroll-outer::before,
+  padding: 0 48px;
+  margin-bottom: 48px;
+  animation: ts-fadeUp 0.5s ease-out both;
+}
+
+.trainers-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: rgba(94, 162, 255, 0.1);
+  border: 1px solid rgba(94, 162, 255, 0.2);
+  margin-bottom: 14px;
+}
+
+.trainers-eyebrow span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #5ea2ff;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.trainers-title {
+  font-size: clamp(3.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+
+.trainers-subtitle {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+}
+
+/* ── Scroll outer wrapper ────────────────────────────────── */
+.trainers-scroll-outer {
+  position: relative;
+}
+
+/* Edge fade masks */
+/* .trainers-scroll-outer::before,
   .trainers-scroll-outer::after {
     content: "";
     position: absolute;
@@ -73,340 +78,358 @@
     pointer-events: none;
     z-index: 2;
   } */
- 
-  .trainers-scroll-outer::before {
-    left: 0;
-    background: linear-gradient(to right, #08080a, transparent);
-  }
- 
-  .trainers-scroll-outer::after {
-    right: 0;
-    background: linear-gradient(to left, #08080a, transparent);
-  }
- 
-  /* ── Scroll track ────────────────────────────────────────── */
-  .trainers-track {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding: 8px 48px 24px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
- 
-  .trainers-track::-webkit-scrollbar {
-    display: none;
-  }
- 
-  /* ── Card ────────────────────────────────────────────────── */
-  .trainer-card {
-    flex-shrink: 0;
-    width: 300px;
-    border-radius: 22px;
-    overflow: hidden;
-    background: #0e0e14;
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    scroll-snap-align: start;
-    transition: transform 0.25s ease, border-color 0.25s ease;
-    animation: ts-fadeUp 0.4s ease-out both;
-  }
- 
-  .trainer-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(255, 255, 255, 0.14);
-  }
- 
-  /* ── Card image area ─────────────────────────────────────── */
-  .trainer-img-wrap {
-    position: relative;
-    height: 280px;
-    overflow: hidden;
-  }
- 
-  /* Use this when you have a real photo */
-  .trainer-img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
-  }
- 
-  /* Placeholder avatar (remove when using real photos) */
-  .trainer-avatar-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    overflow: hidden;
-  }
- 
-  .trainer-avatar-shape {
-    width: 200px;
-    height: 240px;
-    border-radius: 8px 8px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    margin-top: auto;
-  }
- 
-  .trainer-name-watermark {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 60px;
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    opacity: 0.15;
-    line-height: 0.9;
-    text-align: center;
-    color: #fff;
-    padding: 8px;
-    overflow: hidden;
-  }
- 
-  /* ── Placed-at badge (top-left overlay) ─────────────────── */
-  .trainer-badge {
-    position: absolute;
-    top: 14px;
-    left: 14px;
-    background: rgba(10, 10, 18, 0.82);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 6px 10px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
- 
-  .trainer-badge-label {
-    font-size: 10px;
-    color: rgba(255, 255, 255, 0.45);
-    letter-spacing: 0.04em;
-    display: block;
-    margin-bottom: 2px;
-  }
- 
-  .trainer-badge-value {
-    font-size: 13px;
-    font-weight: 700;
-    color: #ffffff;
-    display: block;
-  }
- 
-  /* ── Card body ───────────────────────────────────────────── */
-  .trainer-body {
-    padding: 18px 20px 20px;
-  }
- 
-  .trainer-name {
-    font-size: 16px;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0 0 3px;
-  }
- 
-  .trainer-role {
-    font-size: 11px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.38);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin: 0 0 14px;
-  }
- 
-  /* ── Skill tags ──────────────────────────────────────────── */
-  .trainer-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 14px;
-    list-style: none;
-    padding: 0;
-  }
- 
-  .trainer-tag {
-    font-size: 11px;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 100px;
-    background: rgba(255, 255, 255, 0.06);
-    color: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-  }
- 
-  /* ── Company row ─────────────────────────────────────────── */
-  .trainer-company {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 12px;
-    background: rgba(255, 255, 255, 0.04);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-  }
- 
-  .trainer-company-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
- 
-  .trainer-company-text {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.5);
-  }
- 
-  .trainer-company-name {
-    font-size: 13px;
-    font-weight: 600;
-    color: #ffffff;
-  }
- 
-  /* ── Navigation row ──────────────────────────────────────── */
-  .trainers-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 48px;
-    margin-top: 8px;
-  }
- 
-  .trainers-dots {
-    display: flex;
-    gap: 6px;
-    list-style: none;
-    padding: 0;
-  }
- 
-  .trainers-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
-    cursor: pointer;
-    border: none;
-    transition: width 0.2s ease, background 0.2s ease, border-radius 0.2s ease;
-  }
- 
-  .trainers-dot.active {
-    width: 20px;
-    border-radius: 3px;
-    background: #5ea2ff;
-  }
- 
-  .trainers-nav-btns {
-    display: flex;
-    gap: 10px;
-  }
- 
-  .trainers-nav-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(255, 255, 255, 0.05);
-    color: #ffffff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    transition: background 0.2s ease, border-color 0.2s ease;
-  }
- 
-  .trainers-nav-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.25);
-  }
- 
-  /* ── Responsive ──────────────────────────────────────────── */
-  @media (max-width: 768px) {
-    .trainers-header,
-    .trainers-nav   { padding: 0 20px; }
-    .trainers-track { padding: 8px; }
-    .trainer-card   { width: 360px; }
-  }
- 
-  @media (max-width: 480px) {
 
-    .trainers-track { padding: 8px; }
-    .trainer-card   { width: 360px; }
-
-.trainers-section {
-  padding: 32px 12px;
+.trainers-scroll-outer::before {
+  left: 0;
+  background: linear-gradient(to right, #08080a, transparent);
 }
 
-.trainers-header {
-  margin-bottom: 32px;
-text-align: center;
+.trainers-scroll-outer::after {
+  right: 0;
+  background: linear-gradient(to left, #08080a, transparent);
 }
 
-.trainers-title {
-  font-size: 2.2rem;
-}
-
-.trainers-subtitle {
-  font-size: 1.2rem;
-}
-
-.trainers-eyebrow span {
-  font-size: 10px;
-}
-
+/* ── Scroll track ────────────────────────────────────────── */
 .trainers-track {
-  padding: 8px 12px 16px;
-  gap: 12px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 8px 48px 24px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
 
+.trainers-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Card ────────────────────────────────────────────────── */
 .trainer-card {
-  width: 85%;
-  min-width: 220px;
+  flex-shrink: 0;
+  width: 300px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #0e0e14;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  scroll-snap-align: start;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+  animation: ts-fadeUp 0.4s ease-out both;
 }
 
+.trainer-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+/* ── Card image area ─────────────────────────────────────── */
 .trainer-img-wrap {
-  height: 200px;
+  position: relative;
+  height: 280px;
+  overflow: hidden;
 }
 
+/* Use this when you have a real photo */
+.trainer-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* Placeholder avatar (remove when using real photos) */
+.trainer-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.trainer-avatar-shape {
+  width: 200px;
+  height: 240px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: auto;
+}
+
+.trainer-name-watermark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  opacity: 0.15;
+  line-height: 0.9;
+  text-align: center;
+  color: #fff;
+  padding: 8px;
+  overflow: hidden;
+}
+
+/* ── Placed-at badge (top-left overlay) ─────────────────── */
+.trainer-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(10, 10, 18, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 6px 10px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.trainer-badge-label {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.trainer-badge-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+}
+
+/* ── Card body ───────────────────────────────────────────── */
 .trainer-body {
-  padding: 14px;
+  padding: 18px 20px 20px;
 }
 
 .trainer-name {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 3px;
 }
 
 .trainer-role {
-  font-size: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.38);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+/* ── Skill tags ──────────────────────────────────────────── */
+.trainer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+  list-style: none;
+  padding: 0;
 }
 
 .trainer-tag {
-  font-size: 10px;
-  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* ── Company row ─────────────────────────────────────────── */
 .trainer-company {
-  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.trainer-company-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.trainer-company-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .trainer-company-name {
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
 }
 
+/* ── Navigation row ──────────────────────────────────────── */
 .trainers-nav {
-  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  margin-top: 8px;
+}
+
+.trainers-dots {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+}
+
+.trainers-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  border: none;
+  transition:
+    width 0.2s ease,
+    background 0.2s ease,
+    border-radius 0.2s ease;
+}
+
+.trainers-dot.active {
+  width: 20px;
+  border-radius: 3px;
+  background: #5ea2ff;
+}
+
+.trainers-nav-btns {
+  display: flex;
   gap: 10px;
 }
 
 .trainers-nav-btn {
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
+
+.trainers-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .trainers-header,
+  .trainers-nav {
+    padding: 0 20px;
+  }
+  .trainers-track {
+    padding: 8px;
+  }
+  .trainer-card {
+    width: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trainers-track {
+    padding: 8px;
+    width: 100%;
+  }
+  .trainer-card {
+    width: 360px;
+    heigh
+  }
+
+  .trainers-section {
+    margin: 20px;
+  }
+
+  .trainers-header {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .trainers-title {
+    font-size: 2.2rem;
+  }
+
+  .trainers-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .trainers-eyebrow span {
+    font-size: 10px;
+  }
+
+  .trainers-track {
+    padding: 8px 12px 16px;
+    gap: 12px;
+  }
+
+  .trainer-card {
+    width: 85%;
+    min-width: 220px;
+  }
+
+  .trainer-img-wrap {
+    height: 200px;
+  }
+
+  .trainer-body {
+    padding: 14px;
+  }
+
+  .trainer-name {
+    font-size: 14px;
+  }
+
+  .trainer-role {
+    font-size: 10px;
+  }
+
+  .trainer-tag {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .trainer-company {
+    padding: 8px;
+  }
+
+  .trainer-company-name {
+    font-size: 12px;
+  }
+
+  .trainers-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .trainers-nav-btn {
+    width: 40px;
+    height: 40px;
+  }
 }
