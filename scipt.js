@@ -437,3 +437,31 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 });
+
+
+// ===========================
+
+(function () {
+  const track   = document.getElementById('trainers-track');
+  const dotBtns = document.querySelectorAll('#trainers-dots .trainers-dot');
+  const CARD_W  = 300 + 20;
+  let current   = 0;
+
+  function scrollTo(i) {
+    current = Math.max(0, Math.min(i, dotBtns.length - 1));
+    track.scrollTo({ left: current * CARD_W, behavior: 'smooth' });
+    dotBtns.forEach((d, idx) => d.classList.toggle('active', idx === current));
+  }
+
+  document.getElementById('trainers-next').addEventListener('click', () => scrollTo(current + 1));
+  document.getElementById('trainers-prev').addEventListener('click', () => scrollTo(current - 1));
+  dotBtns.forEach(d => d.addEventListener('click', () => scrollTo(+d.dataset.i)));
+
+  track.addEventListener('scroll', () => {
+    const i = Math.round(track.scrollLeft / CARD_W);
+    if (i !== current) {
+      current = i;
+      dotBtns.forEach((d, idx) => d.classList.toggle('active', idx === current));
+    }
+  });
+})();
