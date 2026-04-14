@@ -52,4 +52,12 @@
   .workspace-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
+  .workspace-gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;   /* 🔥 makes it perfectly square */
+    object-fit: cover;
+    border-radius: 1px;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
 }
