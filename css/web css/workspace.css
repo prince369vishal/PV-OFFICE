@@ -51,7 +51,7 @@
 @media (max-width: 600px) {
   .workspace-gallery {
     grid-template-columns: repeat(2, 1fr);
-    margin: 20px;
+    margin: 20px 10px;
 
   }
   .workspace-gallery img {
