@@ -391,6 +391,9 @@
   .trainers-title{
     font-size: 2.1rem;
   }
+  .trainers-subtitle{
+    font-size: 1rem;
+  }
 
   .trainer-card {
     width: 85%;

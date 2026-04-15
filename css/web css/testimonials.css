@@ -294,7 +294,8 @@
 
 @media (max-width: 480px) {
   .testimonials-section {
-    padding: 56px 0;
+    padding: 15px 0;
+    margin: 20px;
   }
 
   .testimonials-track {
@@ -309,8 +310,7 @@
     font-size: 1.5rem;
   }
   .testimonial-card {
-    width: 85%;
-    min-width: 220px;
     width: 360px;
+    padding: 15px;
   }
 }
