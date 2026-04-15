@@ -167,7 +167,8 @@
 /* ── Person row ──────────────────────────────────────────── */
 .testimonial-person {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 12px;
 }
 
