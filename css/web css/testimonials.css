@@ -299,8 +299,8 @@
   }
 
   .testimonials-track {
-    padding: 8px;
-    width: 90%;
+    padding: 18px;
+    width: 96%;
   }
 
   .testimonials-title{
@@ -311,6 +311,6 @@
   }
   .testimonial-card {
     width: 360px;
-    padding: 15px;
+    padding: 35px;
   }
 }
