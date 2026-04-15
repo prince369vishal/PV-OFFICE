@@ -11,8 +11,8 @@
   margin: 20px 60px;
 }
 
-.mentor-top-title{
-  font-size: 3.5rem;;
+.mentor-top-title {
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.15;
   color: #ffffff;
@@ -21,14 +21,14 @@
   text-align: center;
 }
 
-.courses-subtitle{
+.courses-subtitle {
   margin-bottom: 3.5rem;
 }
 
 /* IMAGES */
 .workspace-gallery img {
   width: 100%;
-  aspect-ratio: 1 / 1;   /* 🔥 makes it perfectly square */
+  aspect-ratio: 1 / 1; /* 🔥 makes it perfectly square */
   object-fit: cover;
   border-radius: 12px;
   transition: 0.3s ease;
@@ -52,11 +52,15 @@
   .workspace-gallery {
     grid-template-columns: repeat(2, 1fr);
     margin: 20px 10px;
-
   }
+  .mentor-top-title {
+    font-size: 2.1rem;
+  }
+
+  
   .workspace-gallery img {
     width: 100%;
-    aspect-ratio: 1 / 1;   /* 🔥 makes it perfectly square */
+    aspect-ratio: 1 / 1; /* 🔥 makes it perfectly square */
     object-fit: cover;
     border-radius: 10px;
     transition: 0.3s ease;

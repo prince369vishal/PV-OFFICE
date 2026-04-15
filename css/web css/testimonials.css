@@ -301,6 +301,13 @@
     padding: 8px;
     width: 100%;
   }
+
+  .testimonials-title{
+    font-size: 2.1rem;
+  }
+  .testimonials-subtitle{
+    font-size: 1.5rem;
+  }
   .testimonial-card {
     width: 85%;
     min-width: 220px;
