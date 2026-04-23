@@ -255,6 +255,16 @@ body {
   border-bottom: none;
 }
 
+.conference-table{
+  background-color:rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  border: 0.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.conference-title{
+ font-size: 3rem;
+ margin-top: 50px;
+}
 .feature-icon {
   width: 36px;
   height: 36px;
