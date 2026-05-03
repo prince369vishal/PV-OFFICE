@@ -314,7 +314,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   text-align: center;
-  margin-bottom: 12px;
+  margin: 12px;
   animation: float-up 0.5s ease-out 0.4s both;
 }
 
